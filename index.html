@@ -5,233 +5,332 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sanjai | Portfolio</title>
+    <meta name="description" content="Sanjai - AI-Driven Solutions Builder, App Developer, and Tech Explorer.">
     <link rel="stylesheet" href="style.css">
-    <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
+
+    <div class="background-animation">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
     <header>
-        <div class="logo">Sanjai.</div>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+        <nav class="container">
+            <div class="logo">Sanjai<span class="accent">.</span></div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#about" class="nav-link"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="#skills" class="nav-link"><i class="fas fa-code"></i> Skills</a></li>
+                <li><a href="#projects" class="nav-link"><i class="fas fa-laptop-code"></i> Projects</a></li>
+                <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
             </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
         </nav>
     </header>
 
-    <main>
-        <section id="home" class="hero">
-            <h1>Hi, I'm Sanjai</h1>
-            <h2>Student & Developer</h2>
-            <p class="tagline">"I build clean and modern web experiences."</p>
-            <a href="#projects" class="btn">View My Work</a>
-        </section>
-
-        <section id="about">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <p>
-                    AI-Driven Solutions Builder | App Development | Tech Explorer | Open-Source Contributor | Web
-                    Developer | Student
-                </p>
-                <div class="info-grid">
-                    <div class="info-item">
-                        <h3>Experience</h3>
-                        <p>1+ Year learning & building projects</p>
-                    </div>
-                    <div class="info-item">
-                        <h3>Education</h3>
-                        <p>Diploma (3rd year)</p>
-                        <p>Kongu Polytechnical College</p>
-                    </div>
-                    <div class="info-item">
-                        <h3>Location</h3>
-                        <p>India</p>
-                    </div>
-                </div>
-                <div class="resume-section" style="margin-top: 2rem;">
-                    <a href="#" class="btn" onclick="alert('Resume download coming soon!')"><i
-                            class="fas fa-download"></i> Download Resume</a>
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <p class="greeting fade-in-up">Hello, I'm</p>
+            <h1 class="name fade-in-up delay-1">Sanjai</h1>
+            <h2 class="role fade-in-up delay-2">I am a <span class="typing-text"></span></h2>
+            <p class="tagline fade-in-up delay-3">"I build clean and modern web experiences."</p>
+            <div class="cta-buttons fade-in-up delay-4">
+                <a href="#projects" class="btn primary"><i class="fas fa-eye"></i> View Projects</a>
+                <a href="#contact" class="btn secondary"><i class="fas fa-paper-plane"></i> Contact Me</a>
+            </div>
+            <div class="scroll-indicator fade-in-up delay-5">
+                <div class="mouse">
+                    <div class="wheel"></div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="skills">
-            <h2 class="section-title">My Skills</h2>
-            <div class="skills-grid">
-                <!-- Programming Languages -->
-                <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Languages</h3>
-                    <div class="skill-bar">
-                        <div class="skill-info">
-                            <span>Flutter</span>
-                            <span>86%</span>
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title reveal-text">About Me <span class="title-icon"><i
+                        class="fas fa-user-astronaut"></i></span></h2>
+            <div class="about-content glass-card reveal-up">
+                <div class="bio">
+                    <p class="bio-intro"><strong>AI-Driven Solutions Builder | App Development | Tech Explorer |
+                            Open-Source Contributor | Web Developer | Student</strong></p>
+                    <p>I am a passionate developer with over 1 year of experience in learning and building projects. I
+                        love exploring new technologies and solving real-world problems through code. My journey is
+                        driven by curiosity and a desire to create impactful solutions.</p>
+
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <i class="fas fa-briefcase"></i>
+                            <div>
+                                <h4>Experience</h4>
+                                <p>1+ Year learning & building</p>
+                            </div>
                         </div>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 86%"></div>
+                        <div class="info-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <h4>Education</h4>
+                                <p>Diploma (3rd year at Kongu Polytechnical College)</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>India</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-info">
+
+                    <div class="resume-download">
+                        <a href="#" class="btn primary" onclick="alert('Resume will be available soon!')"><i
+                                class="fas fa-file-download"></i> Download Resume</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title reveal-text">My Skills <span class="title-icon"><i class="fas fa-tools"></i></span>
+            </h2>
+
+            <div class="skills-wrapper">
+                <div class="skills-category reveal-up">
+                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <i class="fab fa-python skill-icon python"></i>
                             <span>Python</span>
-                            <span>64%</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 64%"></div>
+                            </div>
+                            <span class="percent">64%</span>
                         </div>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 64%"></div>
+                        <div class="skill-card">
+                            <i class="fas fa-mobile-alt skill-icon flutter"></i>
+                            <span>Flutter/Dart</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 86%"></div>
+                            </div>
+                            <span class="percent">86%</span>
                         </div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-info">
+                        <div class="skill-card">
+                            <i class="fas fa-c skill-icon c"></i>
                             <span>C</span>
-                            <span>53%</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 53%"></div>
+                            </div>
+                            <span class="percent">53%</span>
                         </div>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 53%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-info">
+                        <div class="skill-card">
+                            <i class="fas fa-code skill-icon cpp"></i>
                             <span>C++</span>
-                            <span>50%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 50%"></div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 50%"></div>
+                            </div>
+                            <span class="percent">50%</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Frontend -->
-                <div class="skill-category">
+                <div class="skills-category reveal-up delay-1">
                     <h3><i class="fas fa-laptop-code"></i> Frontend</h3>
-                    <div class="skill-bar">
-                        <div class="skill-info">
-                            <span>HTML5</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 80%"></div>
-                        </div>
+                    <div class="skills-tags">
+                        <span class="skill-tag"><i class="fab fa-html5"></i> HTML5</span>
+                        <span class="skill-tag"><i class="fab fa-css3-alt"></i> CSS</span>
+                        <span class="skill-tag"><i class="fab fa-js"></i> JavaScript</span>
+                        <span class="skill-tag"><i class="fas fa-mobile-alt"></i> Flutter</span>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-info">
-                            <span>CSS</span>
-                            <span>75%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 75%"></div>
-                        </div>
+                </div>
+
+                <div class="skills-category reveal-up delay-2">
+                    <h3><i class="fas fa-server"></i> Backend</h3>
+                    <div class="skills-tags">
+                        <span class="skill-tag"><i class="fab fa-node"></i> Node.js</span>
+                        <span class="skill-tag"><i class="fas fa-server"></i> Express.js</span>
+                        <span class="skill-tag"><i class="fas fa-database"></i> MongoDB</span>
+                        <span class="skill-tag"><i class="fas fa-database"></i> PostgreSQL</span>
+                        <span class="skill-tag"><i class="fas fa-database"></i> MySQL</span>
+                        <span class="skill-tag"><i class="fab fa-java"></i> Java</span>
+                        <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
+                        <span class="skill-tag"><i class="fas fa-project-diagram"></i> n8n</span>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-info">
-                            <span>JavaScript</span>
-                            <span>68%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 68%"></div>
-                        </div>
+                </div>
+
+                <div class="skills-category reveal-up delay-3">
+                    <h3><i class="fas fa-toolbox"></i> Tools</h3>
+                    <div class="skills-tags">
+                        <span class="skill-tag"><i class="fab fa-git-alt"></i> Git</span>
+                        <span class="skill-tag"><i class="fab fa-github"></i> GitHub</span>
+                        <span class="skill-tag"><i class="fab fa-docker"></i> Docker</span>
+                        <span class="skill-tag"><i class="fab fa-aws"></i> AWS</span>
+                        <span class="skill-tag"><i class="fas fa-brain"></i> AI/ML</span>
+                        <span class="skill-tag"><i class="fas fa-wifi"></i> IoT</span>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <section id="projects">
-            <h2 class="section-title">Projects</h2>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title reveal-text">Projects <span class="title-icon"><i
+                        class="fas fa-project-diagram"></i></span></h2>
             <div class="projects-grid">
+
                 <!-- Project 1 -->
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3>Gas Leak Detection System</h3>
-                        <p>ESP32 system with servo, relay, gas sensor, safety automation. A working IoT solution for
-                            safety.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">ESP32</span>
-                            <span class="tech-tag">C++</span>
-                            <span class="tech-tag">IoT</span>
+                <div class="project-card glass-card reveal-up">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <div class="folder-icon"><i class="far fa-folder-open"></i></div>
+                            <div class="links">
+                                <span class="disabled-link" title="Live Demo"><i
+                                        class="fas fa-external-link-alt"></i></span>
+                                <span class="disabled-link" title="Code"><i class="fab fa-github"></i></span>
+                            </div>
                         </div>
-                        <div class="project-links">
-                            <span>Working Prototype</span>
+                        <h3>Gas Leak Detection System</h3>
+                        <p class="project-desc">ESP32 system with servo, relay, gas sensor, safety automation. Ensures
+                            safety by detecting leaks and acting instantly.</p>
+                        <div class="tech-stack">
+                            <span>ESP32</span>
+                            <span>C++</span>
+                            <span>IoT</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 2 -->
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3>Emergency Alert</h3>
-                        <p>Start the call and message the live location with a single click.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Flutter</span>
-                            <span class="tech-tag">IoT</span>
+                <div class="project-card glass-card reveal-up delay-1">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <div class="folder-icon"><i class="far fa-folder-open"></i></div>
+                            <div class="links">
+                                <a href="https://github.com/SanjaiPS-tech/Emergencey_Alert.git" target="_blank"
+                                    title="Code"><i class="fab fa-github"></i></a>
+                            </div>
                         </div>
-                        <div class="project-links">
-                            <a href="https://github.com/SanjaiPS-tech/Emergencey_Alert.git" target="_blank"
-                                class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                        <h3>Emergency Alert</h3>
+                        <p class="project-desc">Start the call and message the live location with a single click. A
+                            life-saving application built for emergencies.</p>
+                        <div class="tech-stack">
+                            <span>Flutter</span>
+                            <span>IoT</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 3 -->
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3>Task Manager App</h3>
-                        <p>Simple to-do app with localStorage save functionality.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">JS</span>
+                <div class="project-card glass-card reveal-up delay-2">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <div class="folder-icon"><i class="far fa-folder-open"></i></div>
+                            <div class="links">
+                                <a href="https://github.com/SanjaiPS-tech/Task_Managerg_App" target="_blank"
+                                    title="Code"><i class="fab fa-github"></i></a>
+                            </div>
                         </div>
-                        <div class="project-links">
-                            <a href="https://github.com/SanjaiPS-tech/Task_Managerg_App" target="_blank"
-                                class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                        <h3>Task Manager App</h3>
+                        <p class="project-desc">Simple to-do app with localStorage save. Keep track of your daily tasks
+                            efficiently.</p>
+                        <div class="tech-stack">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JS</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 4 -->
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3>SmartEnergyMeter</h3>
-                        <p>Real-time Smart Energy Meter system using ESP32 that measures voltage, current, and power,
-                            sending live data to a custom Android app via Bluetooth.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Flutter</span>
-                            <span class="tech-tag">ESP32</span>
-                            <span class="tech-tag">Bluetooth</span>
+                <div class="project-card glass-card reveal-up delay-3">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <div class="folder-icon"><i class="far fa-folder-open"></i></div>
+                            <div class="links">
+                                <span class="disabled-link" title="Code"><i class="fab fa-github"></i></span>
+                            </div>
                         </div>
-                        <div class="project-links">
-                            <span>Flutter App</span>
+                        <h3>Smart Energy Meter</h3>
+                        <p class="project-desc">Real-time Smart Energy Meter system using ESP32. Measures voltage,
+                            current, power and sends data to Android app via Bluetooth.</p>
+                        <div class="tech-stack">
+                            <span>Flutter</span>
+                            <span>ESP32</span>
+                            <span>Bluetooth</span>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <section id="contact">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-container">
-                <p>Feel free to reach out for collaborations or just a friendly hello!</p>
-                <div class="contact-links">
-                    <a href="mailto:sanjaips.tech@gmail.com" class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <a href="https://github.com/SanjaiPS-tech" target="_blank" class="contact-item">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/sanjai-ps-tech/" target="_blank" class="contact-item">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title reveal-text">Get In Touch <span class="title-icon"><i
+                        class="fas fa-paper-plane"></i></span></h2>
+            <div class="contact-container">
+                <div class="contact-content glass-card reveal-up">
+                    <h3>Contact Info</h3>
+                    <p>Feel free to reach out for collaborations or just a friendly hello!</p>
+                    <div class="contact-links">
+                        <a href="mailto:sanjaips.tech@gmail.com" class="contact-item">
+                            <div class="icon-box"><i class="fas fa-envelope"></i></div>
+                            <span>sanjaips.tech@gmail.com</span>
+                        </a>
+                        <a href="https://github.com/SanjaiPS-tech" target="_blank" class="contact-item">
+                            <div class="icon-box"><i class="fab fa-github"></i></div>
+                            <span>SanjaiPS-tech</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/sanjai-ps-tech/" target="_blank" class="contact-item">
+                            <div class="icon-box"><i class="fab fa-linkedin"></i></div>
+                            <span>sanjai-ps-tech</span>
+                        </a>
+                    </div>
+                </div>
+
+                <form class="contact-form glass-card reveal-up delay-1">
+                    <h3>Send Message</h3>
+                    <div class="form-group">
+                        <input type="text" id="name" required placeholder=" ">
+                        <label for="name">Full Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" required placeholder=" ">
+                        <label for="email">Email Address</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="5" required placeholder=" "></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                    <button type="submit" class="btn primary">Send Message <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
 
     <footer>
-        <p>&copy; 2025 Sanjai. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2024 Sanjai. Built with <i class="fas fa-heart accent"></i> and Code.</p>
+            <div class="social-links">
+                <a href="https://github.com/SanjaiPS-tech" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/sanjai-ps-tech/" target="_blank"><i
+                        class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>
