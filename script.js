@@ -62,3 +62,55 @@ style.innerHTML = `
     }
 `;
 document.head.appendChild(style);
+
+// Typing Effect
+const typingText = document.querySelector('.typing-text');
+const words = ["App Developer", "Web Developer", "Tech Enthusiast", "AI-ML Enthusiast", "n8n Automation"];
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function type() {
+    const currentWord = words[wordIndex];
+
+    if (isDeleting) {
+        typingText.textContent = currentWord.substring(0, charIndex - 1);
+        charIndex--;
+    } else {
+        typingText.textContent = currentWord.substring(0, charIndex + 1);
+        charIndex++;
+    }
+
+    let typeSpeed = isDeleting ? 100 : 200;
+
+    if (!isDeleting && charIndex === currentWord.length) {
+        isDeleting = true;
+        typeSpeed = 2000; // Pause at end
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+        typeSpeed = 500; // Pause before new word
+    }
+
+    setTimeout(type, typeSpeed);
+}
+
+// Start typing on load
+if (typingText) {
+    type();
+}
+
+// Disable Developer Tools
+document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+document.addEventListener('keydown', (e) => {
+    if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'C') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'J') ||
+        (e.ctrlKey && e.key === 'U')
+    ) {
+        e.preventDefault();
+    }
+});
