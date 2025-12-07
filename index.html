@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sanjai | Portfolio</title>
+    <link rel="icon" type="image/png" href="favicon-logo.png">
     <meta name="description" content="Portfolio of Sanjai - AI-Driven Solutions Builder & Web Developer">
+
+
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,10 +25,13 @@
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#certificates">Certificates</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="Sanjai_PS-Resume.pdf" class="btn-resume">Resume <i class="fas fa-download"></i></a></li>
+                <li><button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme"><i
+                            class="fas fa-sun"></i></button></li>
             </ul>
             <div class="hamburger">
                 <span class="bar"></span>
@@ -177,6 +183,8 @@
                             <span><i class="fas fa-database"></i> MySQL</span>
                             <span><i class="fab fa-java"></i> Java</span>
                             <span><i class="fab fa-python"></i> Python</span>
+                            <span><i class="fas fa-bolt"></i> FastAPI</span>
+                            <span><i class="fas fa-fire"></i> Firebase</span>
                         </div>
                     </div>
 
@@ -200,6 +208,32 @@
             </div>
         </section>
 
+
+        <section id="experience" class="section">
+            <div class="container">
+                <h2 class="section-title">Experience</h2>
+                <div class="projects-grid">
+                    <!-- Experience 1 -->
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3>Internship</h3>
+                            <p class="project-desc">Completed an internship at Kanavu Startup Village as a Full Stack
+                                Developer</p>
+                            <div class="project-tech">
+                                <span><i class="fas fa-certificate"></i> Kanavu Startup Village</span>
+                                <span><i class="fas fa-calendar-alt"></i> May - June 2025</span>
+                            </div>
+                            <div class="project-links"><a
+                                    href="https://drive.google.com/file/d/1KTiF7Lezaah58OswthcU-sJCxgy2n8TJ/view?usp=sharing">
+                                    <span class="link"><i class="fas fa-external-link-alt"></i> View
+                                        Credential</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <section id="projects" class="section">
             <div class="container">
@@ -310,24 +344,7 @@
                         </div>
                     </div>
 
-                    <!-- Certificate 2 -->
-                    <div class="project-card">
-                        <div class="project-content">
-                            <h3>Internship</h3>
-                            <p class="project-desc">Completed an internship at Kanavu Startup Village as a Full Stack
-                                Developer</p>
-                            <div class="project-tech">
-                                <span><i class="fas fa-certificate"></i> Kanavu Startup Village</span>
-                                <span><i class="fas fa-calendar-alt"></i> May - June 2025</span>
-                            </div>
-                            <div class="project-links"><a
-                                    href="https://drive.google.com/file/d/1KTiF7Lezaah58OswthcU-sJCxgy2n8TJ/view?usp=sharing">
-                                    <span class="link"><i class="fas fa-external-link-alt"></i> View
-                                        Credential</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+
 
                     <div class="project-card">
                         <div class="project-content">
@@ -401,6 +418,11 @@
             <p>&copy; 2025 Sanjai. All rights reserved. | Created by Sanjai PS<span class="dot">.</span></p>
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="script.js"></script>
 </body>

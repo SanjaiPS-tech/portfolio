@@ -9,6 +9,31 @@
     --font-main: 'Inter', sans-serif;
     --font-heading: 'Outfit', sans-serif;
     --transition: all 0.3s ease;
+    --nav-bg: rgba(10, 10, 10, 0.8);
+    --border-color: rgba(255, 255, 255, 0.05);
+    --name-gradient: linear-gradient(to right, #fff, #aaa);
+    --hover-bg: rgba(255, 255, 255, 0.05);
+    --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+body.light-mode {
+    --bg-color: #f8f9fa;
+    /* Slightly warmer/lighter gray */
+    --card-bg: #ffffff;
+    --text-primary: #111111;
+    /* Darker black for better contrast */
+    --text-secondary: #4a5568;
+    /* Slate gray for secondary text */
+    --nav-bg: rgba(255, 255, 255, 0.95);
+    --border-color: rgba(0, 0, 0, 0.08);
+    --accent-primary: #0077b6;
+    /* Darker blue/cyan for better visibility on white */
+    --accent-secondary: #5b21b6;
+    /* Darker purple */
+    --gradient-main: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    --name-gradient: linear-gradient(to right, #111, #555);
+    --hover-bg: rgba(0, 0, 0, 0.05);
+    --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
 * {
@@ -50,11 +75,26 @@ ul {
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(10, 10, 10, 0.8);
+    background: var(--nav-bg);
     backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 20px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.theme-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: var(--transition);
+    padding: 0 10px;
+}
+
+.theme-btn:hover {
+    color: var(--accent-primary);
+    transform: rotate(20deg);
 }
 
 .nav-container {
@@ -93,7 +133,7 @@ ul {
 
 .btn-resume {
     padding: 8px 20px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid var(--border-color);
     border-radius: 50px;
     transition: var(--transition);
 }
@@ -165,7 +205,8 @@ ul {
     font-weight: 700;
     line-height: 1.1;
     margin-bottom: 10px;
-    background: linear-gradient(to right, #fff, #aaa);
+    background: var(--name-gradient);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -217,12 +258,12 @@ ul {
 
 .btn-secondary {
     background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid var(--border-color);
     color: var(--text-primary);
 }
 
 .btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--hover-bg);
     border-color: var(--text-primary);
 }
 
@@ -292,8 +333,9 @@ ul {
     display: flex;
     align-items: center;
     gap: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
     transition: var(--transition);
+    box-shadow: 0 4px 6px var(--shadow-color);
 }
 
 .info-item:hover {
@@ -329,7 +371,8 @@ ul {
     background: var(--card-bg);
     padding: 30px;
     border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
 }
 
 .skill-category h3 {
@@ -360,7 +403,9 @@ ul {
     display: flex;
     align-items: center;
     gap: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    align-items: center;
+    gap: 8px;
+    border: 1px solid var(--border-color);
 }
 
 .tags span:hover {
@@ -382,11 +427,15 @@ ul {
     gap: 30px;
 }
 
+#experience .projects-grid {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
 .project-card {
     background: var(--card-bg);
     border-radius: 20px;
     overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
     transition: var(--transition);
     display: flex;
     flex-direction: column;
@@ -410,7 +459,7 @@ ul {
 .project-card:hover {
     transform: translateY(-10px);
     border-color: var(--accent-secondary);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 20px 40px var(--shadow-color);
 }
 
 .project-card:hover::before {
@@ -461,7 +510,10 @@ ul {
 .project-links {
     display: flex;
     gap: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    gap: 20px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 20px;
     padding-top: 20px;
 }
 
@@ -538,8 +590,46 @@ footer {
     padding: 50px 0;
     text-align: center;
     color: var(--text-secondary);
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+    color: var(--text-secondary);
+    border-top: 1px solid var(--border-color);
     margin-top: 50px;
+    margin-top: 50px;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--gradient-main);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: var(--transition);
+    z-index: 999;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
 /* Responsive */
@@ -588,6 +678,7 @@ footer {
     padding: 30px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
+
 /* Timeline Structure */
 .education-timeline {
     margin-top: 60px;
@@ -614,7 +705,7 @@ footer {
 .timeline-container {
     position: relative;
     padding-left: 20px;
-    border-left: 2px solid rgba(255, 255, 255, 0.1);
+    border-left: 2px solid var(--border-color);
 }
 
 .timeline-item {
@@ -629,7 +720,8 @@ footer {
 
 .timeline-dot {
     position: absolute;
-    left: -6px; /* -1px left border + -5px half width */
+    left: -6px;
+    /* -1px left border + -5px half width */
     top: 5px;
     width: 12px;
     height: 12px;
@@ -643,14 +735,19 @@ footer {
     background: var(--card-bg);
     padding: 20px;
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
     transition: var(--transition);
 }
 
 .timeline-content:hover {
     transform: translateX(10px);
-    border-color: rgba(255, 255, 255, 0.1);
-    background: rgba(22, 22, 22, 0.8);
+    border-color: var(--accent-primary);
+    background: var(--card-bg);
+    box-shadow: 0 5px 15px var(--shadow-color);
 }
 
 .timeline-content h4 {
@@ -682,7 +779,24 @@ footer {
     color: var(--accent-primary);
     border: 1px solid rgba(0, 212, 255, 0.2);
 }
-.typing-text::after { content: '|'; animation: blink 1s infinite; } @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+.typing-text::after {
+    content: '|';
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
 /* Map Container */
 .map-container {
     margin-top: 15px;
@@ -691,7 +805,7 @@ footer {
     border-radius: 8px;
     overflow: hidden;
     position: relative;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border-color);
 }
 
 .map-container iframe {
@@ -701,6 +815,7 @@ footer {
     filter: invert(90%) hue-rotate(180deg);
     /* Optional: Dark mode map effect */
 }
+
 /* Refined Map Styling */
 .timeline-content {
     display: flex;
