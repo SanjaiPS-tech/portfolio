@@ -466,6 +466,14 @@ ul {
     opacity: 1;
 }
 
+.pin-icon {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 1.2rem;
+    z-index: 10;
+}
+
 .project-content {
     padding: 30px;
     flex: 1;
